@@ -13,7 +13,6 @@ using WebMatrix.WebData;
 namespace Demo.Web.Portal.Controllers
 {
     [Authorize]
-    [InitializeSimpleMembership]
     public class AccountController : Controller
     {
         //
