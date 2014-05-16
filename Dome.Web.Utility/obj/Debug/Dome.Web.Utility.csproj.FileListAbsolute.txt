@@ -1,0 +1,6 @@
+D:\Project\Demo\Dome.Web.Utility\bin\Debug\Dome.Web.Utility.dll
+D:\Project\Demo\Dome.Web.Utility\bin\Debug\Dome.Web.Utility.pdb
+D:\Project\Demo\Dome.Web.Utility\bin\Debug\Autofac.dll
+D:\Project\Demo\Dome.Web.Utility\bin\Debug\Autofac.xml
+D:\Project\Demo\Dome.Web.Utility\obj\Debug\Dome.Web.Utility.dll
+D:\Project\Demo\Dome.Web.Utility\obj\Debug\Dome.Web.Utility.pdb
