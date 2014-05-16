@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2E2D4286-7CA1-4293-B002-FD5DDA087BF1}</ProjectGuid>
+    <ProjectGuid>{39712A96-9A0E-44B7-842E-942F48AE9DD8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Demo.Caching</RootNamespace>
-    <AssemblyName>Demo.Caching</AssemblyName>
+    <RootNamespace>Demo.Based</RootNamespace>
+    <AssemblyName>Demo.Based</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,11 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Enyim.Caching">
-      <HintPath>..\Demo.Web.Portal\lib\Enyim.Caching.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,18 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cache.cs" />
+    <Compile Include="Base.cs" />
+    <Compile Include="Caching.cs" />
+    <Compile Include="Current.cs" />
+    <Compile Include="Session.cs" />
+    <Compile Include="EnCode.cs" />
+    <Compile Include="Logs.cs" />
+    <Compile Include="ILogs.cs" />
+    <Compile Include="Files.cs" />
+    <Compile Include="TAttribute.cs" />
+    <Compile Include="XmlToData.cs" />
+    <Compile Include="Enum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Demo.Based\Demo.Based.csproj">
-      <Project>{39712a96-9a0e-44b7-842e-942f48ae9dd8}</Project>
-      <Name>Demo.Based</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Demo.Cached\Demo.Cached.csproj">
-      <Project>{22F12F18-D835-4D27-BAF7-CD59D58FCA14}</Project>
-      <Name>Demo.Cached</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
