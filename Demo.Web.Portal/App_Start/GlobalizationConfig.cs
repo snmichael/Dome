@@ -13,7 +13,7 @@ namespace Demo.Web.Portal
             if(RouteTable.Routes==null)
                 return;
             //路由集合
-            var routeCollection = new RouteCollection();
+            RouteCollection routeCollection = new RouteCollection();
 
             //这里需要跳过routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             //由于IgnoreRouteInternal是个私有类，所以这里只能反射

@@ -69,7 +69,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseController.cs" />
-    <Compile Include="Globalization\ResourceExtensions.cs" />
+    <Compile Include="Globalization\GlobalizationBaseController.cs" />
+    <Compile Include="Helper\ResourceExtensions.cs" />
     <Compile Include="Globalization\CultureProvider.cs" />
     <Compile Include="Globalization\CulturePrefixRule.cs" />
     <Compile Include="Globalization\CustomControllerActionInvoker.cs" />

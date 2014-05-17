@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Globalization;
 using System.Web;
 using System.Web.Compilation;
 using System.Web.Mvc;
 
-namespace Demo.Web.Utility.Globalization
+namespace Demo.Web.Utility.Helper
 {
     public static class ResourceExtensions
     {
@@ -25,7 +20,7 @@ namespace Demo.Web.Utility.Globalization
             return GetGlobalResource(fields, args);
         }
 
-        static string GetGlobalResource(ResourceExpressionFields fields, object[] args)
+        public static string GetGlobalResource(ResourceExpressionFields fields, object[] args)
         {
             return string.Format((string)HttpContext.GetGlobalResourceObject(fields.ClassKey, fields.ResourceKey, CultureInfo.CurrentUICulture), args);
         }

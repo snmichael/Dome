@@ -10,7 +10,7 @@ namespace Demo.Web.Utility.Globalization
     public static class CultureProvider
     {
         public const string CultureCookieKey = "Lang";
-        public const string CultureDefault = "en-US";
+        public const string CultureDefault = "zh-cn";
 
         public static CultureInfo GetCultureInfo(string ci)
         {

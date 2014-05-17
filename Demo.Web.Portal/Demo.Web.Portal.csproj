@@ -176,6 +176,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_GlobalResources\Resource.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -321,8 +326,12 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resource\Resource.en-us.resx" />
-    <EmbeddedResource Include="Resource\Resource.zh-cn.resx" />
+    <Content Include="App_GlobalResources\Resource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resource.designer.cs</LastGenOutput>
+    </Content>
+    <EmbeddedResource Include="App_GlobalResources\Resource.en-us.resx" />
+    <EmbeddedResource Include="App_GlobalResources\Resource.zh-cn.resx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Demo.Web.Utility\Demo.Web.Utility.csproj">
