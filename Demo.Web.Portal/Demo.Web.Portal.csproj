@@ -253,9 +253,14 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Localization\Language\en-us.xml" />
+    <Content Include="Localization\Language\zh-cn.xml" />
     <Content Include="Scripts\Bootstrap\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\Bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Scripts\Bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Localization\Resources.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="lib\Enyim.Caching.dll" />
     <Content Include="Scripts\Bootstrap\css\bootstrap-theme.css" />
@@ -321,6 +326,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="config\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

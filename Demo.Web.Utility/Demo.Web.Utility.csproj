@@ -70,6 +70,9 @@
   <ItemGroup>
     <Compile Include="BaseController.cs" />
     <Compile Include="Globalization\GlobalizationBaseController.cs" />
+    <Compile Include="Globalization\LanuagePack.cs" />
+    <Compile Include="Globalization\Models\InstallationLocaleResource.cs" />
+    <Compile Include="Globalization\Models\InstallationLanguage.cs" />
     <Compile Include="Helper\ResourceExtensions.cs" />
     <Compile Include="Globalization\CultureProvider.cs" />
     <Compile Include="Globalization\CulturePrefixRule.cs" />

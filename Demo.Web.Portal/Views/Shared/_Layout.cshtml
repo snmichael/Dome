@@ -9,22 +9,29 @@
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
+        <script language="javascript">
+            var ChangeLanguage = function(sender) {
+                location.href = "/" + sender.value + "/";
+            }
+        </script>
     </head>
     <body>
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
+                    @Html.DropDownList("lang", ViewBag.LangView as IEnumerable<SelectListItem>, new { onchange = "ChangeLanguage(this)" })
                     <p class="site-title">@Html.ActionLink("将你的徽标放置在此处", "Index", "Home")</p>
                 </div>
+                
                 <div class="float-right">
                     <section id="login">
                         @Html.Partial("_LoginPartial")
                     </section>
                     <nav>
                         <ul id="menu">
-                            <li>@Html.ActionLink("主页", "Index", "Home")</li>
-                            <li>@Html.ActionLink("关于", "About", "Home")</li>
-                            <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
+                            <li>@Html.ActionLink(Html.Resource("Site.HomePage"), "Index", "Home")</li>
+                            <li>@Html.ActionLink(Html.Resource("Site.AboutUs"), "About", "Home")</li>
+                            <li>@Html.ActionLink(Html.Resource("Site.ContactUs"), "Contact", "Home")</li>
                         </ul>
                     </nav>
                 </div>

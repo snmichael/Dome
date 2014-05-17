@@ -26,16 +26,16 @@ namespace Demo.Web.Portal
             foreach (var route in routes)
             {
                 var item = (route as Route);
-                //下面的代码创建一个新的路由对象，在url规则前面加上ci参数，并拷贝其他设置
+                //下面的代码创建一个新的路由对象，在url规则前面加上lang参数，并拷贝其他设置
                 var newRoute = new Route(
-                    //string.Format(@"{ci}/{0}",item.Url),
-                    @"{ci}/"+item.Url,
+                    //string.Format(@"{lang}/{0}",item.Url),
+                    @"{lang}/"+item.Url,
                     new MvcRouteHandler()
                     );
                 newRoute.Defaults= new RouteValueDictionary(item.Defaults);
                 newRoute.Constraints= new RouteValueDictionary(item.Constraints);
-                //ci参数需要验证，因为只有合法的culture才能被接受
-                newRoute.Constraints.Add("ci", new CulturePrefixRule());
+                //lang参数需要验证，因为只有合法的culture才能被接受
+                newRoute.Constraints.Add("lang", new CulturePrefixRule());
                 newRoute.DataTokens= new RouteValueDictionary();
                 newRoute.DataTokens["Namespaces"] = item.DataTokens["Namespaces"];
                 routeCollection.Add(newRoute);

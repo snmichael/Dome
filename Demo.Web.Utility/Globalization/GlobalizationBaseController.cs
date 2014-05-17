@@ -14,9 +14,10 @@ namespace Demo.Web.Utility.Globalization
         protected override void Initialize(RequestContext requestContext)
         {
             base.Initialize(requestContext);
+            
             object cultureValue;
-            //检测ci
-            if (requestContext.RouteData.Values.TryGetValue("ci", out cultureValue))
+            //检测lang
+            if (requestContext.RouteData.Values.TryGetValue("lang", out cultureValue))
             {
                 //设置当前线程的culture
                 try
@@ -31,7 +32,7 @@ namespace Demo.Web.Utility.Globalization
                     throw new Exception("Culture Error!");
                 }
             }
-            else//如果没有ci参数
+            else//如果没有lang参数
             {
                 //check cookie
                 var langHttpCookie = requestContext.HttpContext.Request.Cookies[CultureProvider.CultureCookieKey];
