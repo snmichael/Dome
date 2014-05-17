@@ -106,3 +106,5 @@ D:\Project\Demo\Demo.Web.Portal\obj\Debug\Demo.Web.Portal.Resource.Resource.zh-c
 D:\Project\Demo\Demo.Web.Portal\obj\Debug\Demo.Web.Portal.csproj.GenerateResource.Cache
 D:\Project\Demo\Demo.Web.Portal\obj\Debug\en-us\Demo.Web.Portal.resources.dll
 D:\Project\Demo\Demo.Web.Portal\obj\Debug\zh-cn\Demo.Web.Portal.resources.dll
+D:\Project\Demo\Demo.Web.Portal\bin\Demo.Web.Utility.dll
+D:\Project\Demo\Demo.Web.Portal\bin\Demo.Web.Utility.pdb

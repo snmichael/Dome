@@ -21,8 +21,9 @@ namespace Demo.Web.Portal
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            GlobalizationConfig.RegisterGlobalizationRoutes();
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            AuthConfig.RegisterAuth();
+            //AuthConfig.RegisterAuth();
         }
     }
 }

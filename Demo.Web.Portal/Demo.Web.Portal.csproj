@@ -179,6 +179,7 @@
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\GlobalizationConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -322,6 +323,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Resource\Resource.en-us.resx" />
     <EmbeddedResource Include="Resource\Resource.zh-cn.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Demo.Web.Utility\Demo.Web.Utility.csproj">
+      <Project>{47b0a32b-1fa5-4d2d-8bc7-2efa5330b93a}</Project>
+      <Name>Demo.Web.Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
