@@ -11,11 +11,8 @@ namespace Demo.Web.Utility
 {
     public class BaseController:GlobalizationBaseController
     {
-        private const string Title = "CRM系统";
-
         protected override void OnResultExecuting(ResultExecutingContext filterContext)
         {
-            ViewBag.Title = Title + "-" + ViewBag.Title;
             base.OnResultExecuting(filterContext);
             
         }

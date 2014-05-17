@@ -61,7 +61,43 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   查找类似 HuaZhu Hotel Group CRM System 的本地化字符串。
+        ///   查找类似 主页 的本地化字符串。
+        /// </summary>
+        internal static string Site_HomePage {
+            get {
+                return ResourceManager.GetString("Site.HomePage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 登录 的本地化字符串。
+        /// </summary>
+        internal static string Site_Login {
+            get {
+                return ResourceManager.GetString("Site.Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 注销 的本地化字符串。
+        /// </summary>
+        internal static string Site_Logout {
+            get {
+                return ResourceManager.GetString("Site.Logout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 注册 的本地化字符串。
+        /// </summary>
+        internal static string Site_Register {
+            get {
+                return ResourceManager.GetString("Site.Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 华住酒店集团CRM管理系统 的本地化字符串。
         /// </summary>
         internal static string Site_Title {
             get {
@@ -70,7 +106,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   查找类似 {0},Welcome to CRM systems! 的本地化字符串。
+        ///   查找类似 {0}，欢迎您登录CRM系统！ 的本地化字符串。
         /// </summary>
         internal static string Site_WelcomeWord {
             get {

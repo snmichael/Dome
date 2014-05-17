@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
 using System.Web;
 using System.Web.Compilation;
 using System.Web.Mvc;
@@ -20,9 +21,10 @@ namespace Demo.Web.Utility.Helper
             return GetGlobalResource(fields, args);
         }
 
-        public static string GetGlobalResource(ResourceExpressionFields fields, object[] args)
+        static string GetGlobalResource(ResourceExpressionFields fields, object[] args)
         {
-            return string.Format((string)HttpContext.GetGlobalResourceObject(fields.ClassKey, fields.ResourceKey, CultureInfo.CurrentUICulture), args);
+            string value = string.Format((string)HttpContext.GetGlobalResourceObject(fields.ClassKey, fields.ResourceKey, CultureInfo.CurrentUICulture), args);
+            return value;
         }
 
         static ResourceExpressionFields GetResourceFields(string expression, string virtualPath)

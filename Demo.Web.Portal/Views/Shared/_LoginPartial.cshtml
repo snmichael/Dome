@@ -1,14 +1,16 @@
-﻿@if (Request.IsAuthenticated) {
+﻿@using Demo.Web.Utility.Helper
+@if (Request.IsAuthenticated) {
     <text>
-        你好，@Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "管理" })!
+        @Html.Resource("Site.WelcomeWord", @Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "管理" }))!
+        
         @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" })) {
             @Html.AntiForgeryToken()
-            <a href="javascript:document.getElementById('logoutForm').submit()">注销</a>
+            <a href="javascript:document.getElementById('logoutForm').submit()">@Html.Resource("Site.Logout")</a>
         }
     </text>
 } else {
     <ul>
-        <li>@Html.ActionLink("注册", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-        <li>@Html.ActionLink("登录", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        <li>@Html.ActionLink(Html.Resource("Site.Register"), "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink(Html.Resource("Site.Login"), "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
     </ul>
 }
