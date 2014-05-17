@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Globalization;
 using System.Linq;
-using System.Web;
 using System.Web.Compilation;
 using System.Web.Mvc;
-using Demo.Web.Utility.Globalization;
+using Demo.Based.Globalization;
 
-namespace Demo.Web.Utility.Helper
+namespace Demo.Based.Helper
 {
     public static class ResourceExtensions
     {

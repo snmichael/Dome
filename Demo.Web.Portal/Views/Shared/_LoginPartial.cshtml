@@ -1,5 +1,4 @@
-﻿@using Demo.Web.Utility.Helper
-@if (Request.IsAuthenticated) {
+﻿@if (Request.IsAuthenticated) {
     <text>
         @Html.Resource("Site.WelcomeWord", @Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "管理" }))!
         

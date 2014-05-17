@@ -135,4 +135,22 @@
   <data name="Site.WelcomeWord" xml:space="preserve">
     <value>{0}，欢迎您登录CRM系统！</value>
   </data>
+  <data name="LoginModel.PassWord" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="Site.AboutUs" xml:space="preserve">
+    <value>关于我们</value>
+  </data>
+  <data name="Site.ContactUs" xml:space="preserve">
+    <value>联系我们</value>
+  </data>
+  <data name="LoginModel.UserName" xml:space="preserve">
+    <value>用户名</value>
+  </data>
+  <data name="LoginModel.RememberMe" xml:space="preserve">
+    <value>记住我?</value>
+  </data>
+  <data name="LoginModel_UserName_UserName" xml:space="preserve">
+    <value>UserName</value>
+  </data>
 </root>

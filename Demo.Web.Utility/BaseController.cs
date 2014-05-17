@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Mvc;
-using Demo.Web.Utility.Globalization;
-using Demo.Web.Utility.Helper;
+using Demo.Based.Globalization;
 
 namespace Demo.Web.Utility
 {
@@ -22,6 +18,7 @@ namespace Demo.Web.Utility
 
         private void InitLangs()
         {
+
             var lanuagePackages = LanuagePack.GetAvailableLanguages();
             var langs = lanuagePackages.Select(item => new SelectListItem
             {
@@ -29,7 +26,14 @@ namespace Demo.Web.Utility
                 Value = item.Code,
                 Selected = (String.Equals(item.Code, CultureInfo.CurrentUICulture.ToString(), StringComparison.CurrentCultureIgnoreCase))
             }).ToList();
-
+            //var langs = new List<SelectListItem>() { new SelectListItem() { Text = "English", Value = "en-us" }, new SelectListItem() { Text = "中文简体", Value = "zh-cn" } };
+            //foreach (SelectListItem t in langs)
+            //{
+            //    if (t.Value == CultureInfo.CurrentUICulture.ToString().ToLower())
+            //    {
+            //        t.Selected = true;
+            //    }
+            //}
             ViewBag.LangView = langs;
         }
     }

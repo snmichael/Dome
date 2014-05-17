@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Xml;
-using Demo.Web.Utility.Globalization.Models;
+using Demo.Based.Globalization.Models;
 
-namespace Demo.Web.Utility.Globalization
+namespace Demo.Based.Globalization
 {
     public class LanuagePack
     {

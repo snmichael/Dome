@@ -17,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Error", "Demo.Error\De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Web.Portal", "Demo.Web.Portal\Demo.Web.Portal.csproj", "{EB5C2431-616D-4CFE-B755-16CB54F12214}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Web.Portal.Tests", "Demo.Web.Portal.Tests\Demo.Web.Portal.Tests.csproj", "{AFF90C99-3E54-4A93-8D2A-CBEC274804EE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Service", "Demo.Service\Demo.Service.csproj", "{C4CE956F-28B0-4F62-BBCE-3DC118BE52B1}"
 EndProject
 Global
@@ -55,10 +53,6 @@ Global
 		{EB5C2431-616D-4CFE-B755-16CB54F12214}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB5C2431-616D-4CFE-B755-16CB54F12214}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB5C2431-616D-4CFE-B755-16CB54F12214}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AFF90C99-3E54-4A93-8D2A-CBEC274804EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AFF90C99-3E54-4A93-8D2A-CBEC274804EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AFF90C99-3E54-4A93-8D2A-CBEC274804EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AFF90C99-3E54-4A93-8D2A-CBEC274804EE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C4CE956F-28B0-4F62-BBCE-3DC118BE52B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C4CE956F-28B0-4F62-BBCE-3DC118BE52B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4CE956F-28B0-4F62-BBCE-3DC118BE52B1}.Release|Any CPU.ActiveCfg = Release|Any CPU

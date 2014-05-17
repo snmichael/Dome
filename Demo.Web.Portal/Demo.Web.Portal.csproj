@@ -176,11 +176,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_GlobalResources\Resource.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resource.resx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -188,12 +183,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -253,8 +248,12 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Localization\Language\en-us.xml" />
-    <Content Include="Localization\Language\zh-cn.xml" />
+    <Content Include="Localization\Language\en-us.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Localization\Language\zh-cn.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Scripts\Bootstrap\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\Bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Scripts\Bootstrap\fonts\glyphicons-halflings-regular.woff" />
@@ -323,23 +322,21 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
+    <Content Include="Views\Error\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="config\" />
+    <Folder Include="Filters\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="App_GlobalResources\Resource.en-us.resx" />
-    <Content Include="App_GlobalResources\Resource.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>Resource.designer.cs</LastGenOutput>
-    </Content>
-    <EmbeddedResource Include="App_GlobalResources\Resource.zh-cn.resx" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\Demo.Based\Demo.Based.csproj">
+      <Project>{39712A96-9A0E-44B7-842E-942F48AE9DD8}</Project>
+      <Name>Demo.Based</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Demo.Web.Utility\Demo.Web.Utility.csproj">
       <Project>{47b0a32b-1fa5-4d2d-8bc7-2efa5330b93a}</Project>
       <Name>Demo.Web.Utility</Name>

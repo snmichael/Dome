@@ -61,6 +61,60 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   查找类似 密码 的本地化字符串。
+        /// </summary>
+        internal static string LoginModel_PassWord {
+            get {
+                return ResourceManager.GetString("LoginModel.PassWord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 记住我? 的本地化字符串。
+        /// </summary>
+        internal static string LoginModel_RememberMe {
+            get {
+                return ResourceManager.GetString("LoginModel.RememberMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 用户名 的本地化字符串。
+        /// </summary>
+        internal static string LoginModel_UserName {
+            get {
+                return ResourceManager.GetString("LoginModel.UserName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 UserName 的本地化字符串。
+        /// </summary>
+        internal static string LoginModel_UserName_UserName {
+            get {
+                return ResourceManager.GetString("LoginModel_UserName_UserName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 关于我们 的本地化字符串。
+        /// </summary>
+        internal static string Site_AboutUs {
+            get {
+                return ResourceManager.GetString("Site.AboutUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 联系我们 的本地化字符串。
+        /// </summary>
+        internal static string Site_ContactUs {
+            get {
+                return ResourceManager.GetString("Site.ContactUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 主页 的本地化字符串。
         /// </summary>
         internal static string Site_HomePage {

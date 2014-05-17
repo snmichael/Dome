@@ -1,9 +1,9 @@
+D:\Project\Demo\Demo.Web.Portal\obj\Debug\Demo.Web.Portal.csprojResolveAssemblyReference.cache
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.Web.Portal.dll.config
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.Web.Portal.dll
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.Web.Portal.pdb
-D:\Project\Demo\Demo.Web.Portal\bin\en-us\Demo.Web.Portal.resources.dll
-D:\Project\Demo\Demo.Web.Portal\bin\zh-cn\Demo.Web.Portal.resources.dll
 D:\Project\Demo\Demo.Web.Portal\bin\Antlr3.Runtime.dll
+D:\Project\Demo\Demo.Web.Portal\bin\Demo.Based.dll
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.Web.Utility.dll
 D:\Project\Demo\Demo.Web.Portal\bin\DotNetOpenAuth.AspNet.dll
 D:\Project\Demo\Demo.Web.Portal\bin\DotNetOpenAuth.Core.dll
@@ -33,6 +33,7 @@ D:\Project\Demo\Demo.Web.Portal\bin\System.Web.WebPages.Razor.dll
 D:\Project\Demo\Demo.Web.Portal\bin\WebGrease.dll
 D:\Project\Demo\Demo.Web.Portal\bin\WebMatrix.Data.dll
 D:\Project\Demo\Demo.Web.Portal\bin\WebMatrix.WebData.dll
+D:\Project\Demo\Demo.Web.Portal\bin\Demo.Based.pdb
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.Web.Utility.pdb
 D:\Project\Demo\Demo.Web.Portal\bin\EntityFramework.xml
 D:\Project\Demo\Demo.Web.Portal\bin\Newtonsoft.Json.xml
@@ -100,11 +101,5 @@ D:\Project\Demo\Demo.Web.Portal\bin\ko\System.Spatial.resources.dll
 D:\Project\Demo\Demo.Web.Portal\bin\ru\System.Spatial.resources.dll
 D:\Project\Demo\Demo.Web.Portal\bin\zh-Hans\System.Spatial.resources.dll
 D:\Project\Demo\Demo.Web.Portal\bin\zh-Hant\System.Spatial.resources.dll
-D:\Project\Demo\Demo.Web.Portal\obj\Debug\Demo.Web.Portal.csprojResolveAssemblyReference.cache
-D:\Project\Demo\Demo.Web.Portal\obj\Debug\Demo.Web.Portal.App_GlobalResources.Resource.en-us.resources
-D:\Project\Demo\Demo.Web.Portal\obj\Debug\Demo.Web.Portal.App_GlobalResources.Resource.zh-cn.resources
-D:\Project\Demo\Demo.Web.Portal\obj\Debug\Demo.Web.Portal.csproj.GenerateResource.Cache
-D:\Project\Demo\Demo.Web.Portal\obj\Debug\en-us\Demo.Web.Portal.resources.dll
-D:\Project\Demo\Demo.Web.Portal\obj\Debug\zh-cn\Demo.Web.Portal.resources.dll
 D:\Project\Demo\Demo.Web.Portal\obj\Debug\Demo.Web.Portal.dll
 D:\Project\Demo\Demo.Web.Portal\obj\Debug\Demo.Web.Portal.pdb

@@ -1,5 +1,4 @@
-﻿@using Demo.Web.Utility.Helper
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh">
     <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -10,8 +9,10 @@
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
         <script language="javascript">
-            var ChangeLanguage = function(sender) {
-                location.href = "/" + sender.value + "/";
+            var ChangeLanguage = function (sender) {
+                debugger;
+                var lang = location.pathname.split('/')[1];
+                location.href = location.pathname.replace(lang, sender.value);
             }
         </script>
     </head>

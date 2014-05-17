@@ -124,7 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Demo.Web.Portal\Demo.Web.Portal.csproj">
-      <Project>{EB5C2431-616D-4CFE-B755-16CB54F12214}</Project>
+      <Project>{eb5c2431-616d-4cfe-b755-16cb54f12214}</Project>
       <Name>Demo.Web.Portal</Name>
     </ProjectReference>
   </ItemGroup>
