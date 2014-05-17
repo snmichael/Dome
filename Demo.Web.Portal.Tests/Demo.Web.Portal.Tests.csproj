@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F751FB3E-12AA-4951-90A1-5964822B0454}</ProjectGuid>
+    <ProjectGuid>{F2013750-D003-483D-9EEC-1ECE9192341B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Demo.Web.Portal.Tests</RootNamespace>
@@ -107,7 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Demo.Web.Portal\Demo.Web.Portal.csproj">
-      <Project>{85FFB90C-EFDA-496A-9D83-B99134C18B5E}</Project>
+      <Project>{ECB01FAF-86F8-41D2-86B2-760C21B5E622}</Project>
       <Name>Demo.Web.Portal</Name>
     </ProjectReference>
   </ItemGroup>
