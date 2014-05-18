@@ -10,7 +10,6 @@
         @Scripts.Render("~/bundles/modernizr")
         <script language="javascript">
             var ChangeLanguage = function (sender) {
-                debugger;
                 var lang = location.pathname.split('/')[1];
                 location.href = location.pathname.replace(lang, sender.value);
             }
@@ -20,8 +19,7 @@
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
-                    @Html.DropDownList("lang", ViewBag.LangView as IEnumerable<SelectListItem>, new { onchange = "ChangeLanguage(this)" })
-                    <p class="site-title">@Html.ActionLink("将你的徽标放置在此处", "Index", "Home")</p>
+                    <p class="site-title">@Html.ActionLink(Html.Resource("Site.Title"), "Index", "Home")</p>
                 </div>
                 
                 <div class="float-right">
@@ -47,7 +45,7 @@
         <footer>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - 我的 ASP.NET MVC 应用程序</p>
+                    <p>&copy; @DateTime.Now.Year - @Html.Resource("Site.Title")</p>
                 </div>
             </div>
         </footer>

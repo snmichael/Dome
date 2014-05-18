@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -91,6 +92,17 @@ namespace Demo.Based.Globalization
                 _availableLanguages = _availableLanguages.OrderBy(l => l.Name).ToList();
 
             }
+        }
+        public static string GetGlobalResource(string resourceKey, params object[] args)
+        {
+            var value = resourceKey;
+            var lanuage = LanuagePack.GetAvailableLanguages().FirstOrDefault(lang => String.Equals(lang.Code, CultureInfo.CurrentUICulture.ToString(), StringComparison.CurrentCultureIgnoreCase));
+            if (lanuage == null) return args == null ? value : string.Format(value, args);
+            var resource =
+                lanuage.Resources.FirstOrDefault(r => String.Equals(r.Name, resourceKey, StringComparison.CurrentCultureIgnoreCase));
+            if (resource == null) return args == null ? value : string.Format(value, args);
+            value = resource.Value;
+            return string.Format(value, args);
         }
     }
 }

@@ -1,15 +1,21 @@
-﻿@if (Request.IsAuthenticated) {
+﻿@if (Request.IsAuthenticated)
+{
     <text>
         @Html.Resource("Site.WelcomeWord", @Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "管理" }))!
-        
-        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" })) {
+
+        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+        {
             @Html.AntiForgeryToken()
             <a href="javascript:document.getElementById('logoutForm').submit()">@Html.Resource("Site.Logout")</a>
         }
     </text>
-} else {
+}
+else
+{
     <ul>
+
         <li>@Html.ActionLink(Html.Resource("Site.Register"), "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
         <li>@Html.ActionLink(Html.Resource("Site.Login"), "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        <li>@Html.DropDownList("lang", ViewBag.LangView as IEnumerable<SelectListItem>, new { onchange = "ChangeLanguage(this)" })</li>
     </ul>
 }

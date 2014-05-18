@@ -1,7 +1,7 @@
-﻿@model Demo.Web.Portal.Models.LoginModel
+﻿@model Demo.Services.Models.LoginModel
 
 @{
-    ViewBag.Title = "登录";
+    ViewBag.Title = Html.Resource("Site.Login");
 }
 
 <hgroup class="title">
@@ -9,13 +9,13 @@
 </hgroup>
 
 <section id="loginForm">
-<h2>使用本地帐户登录。</h2>
+<h2>@Html.Resource("Page.Login.Title")</h2>
 @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>“登录”表单</legend>
+        <legend>@Html.Resource("Page.Login.Title")</legend>
         <ol>
             <li>
                 @Html.LabelFor(m => m.UserName)
@@ -23,26 +23,25 @@
                 @Html.ValidationMessageFor(m => m.UserName)
             </li>
             <li>
-                @Html.LabelFor(m => m.Password)
-                @Html.PasswordFor(m => m.Password)
-                @Html.ValidationMessageFor(m => m.Password)
+                @Html.LabelFor(m => m.PassWord)
+                @Html.PasswordFor(m => m.PassWord)
             </li>
             <li>
                 @Html.CheckBoxFor(m => m.RememberMe)
                 @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
             </li>
         </ol>
-        <input type="submit" value="登录" />
+        <input type="submit" value=@Html.Resource("Site.Login") />
     </fieldset>
     <p>
-        @Html.ActionLink("注册", "Register") 如果你没有帐户。
+        @Html.ActionLink(Html.Resource("Site.Register"), "Register") 
+        @Html.Resource("Page.Login.IfNoAccount")
     </p>
 }
 </section>
 
 <section class="social" id="socialLoginForm">
     <h2>使用其他服务登录。</h2>
-    @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
 </section>
 
 @section Scripts {

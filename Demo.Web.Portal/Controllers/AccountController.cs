@@ -5,11 +5,11 @@ using System.Transactions;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using Demo.Services.Models;
 using Demo.Web.Utility;
 using DotNetOpenAuth.AspNet;
 using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
-using Demo.Web.Portal.Models;
 
 namespace Demo.Web.Portal.Controllers
 {
@@ -34,13 +34,13 @@ namespace Demo.Web.Portal.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginModel model, string returnUrl)
         {
-            if (ModelState.IsValid && WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
-            {
-                return RedirectToLocal(returnUrl);
-            }
+            //if (ModelState.IsValid && WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
+            //{
+            //    return RedirectToLocal(returnUrl);
+            //}
 
-            // 如果我们进行到这一步时某个地方出错，则重新显示表单
-            ModelState.AddModelError("", "提供的用户名或密码不正确。");
+            //// 如果我们进行到这一步时某个地方出错，则重新显示表单
+            //ModelState.AddModelError("", "提供的用户名或密码不正确。");
             return View(model);
         }
 
@@ -51,7 +51,7 @@ namespace Demo.Web.Portal.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult LogOff()
         {
-            WebSecurity.Logout();
+            //WebSecurity.Logout();
 
             return RedirectToAction("Index", "Home");
         }

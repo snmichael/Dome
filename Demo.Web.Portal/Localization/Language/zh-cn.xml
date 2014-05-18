@@ -25,6 +25,29 @@
   <LocaleResource Name="Site.ContactUs">
     <Value>联系我们</Value>
   </LocaleResource>
+
+  <LocaleResource Name="Login.UserName">
+    <Value>用户名</Value>
+  </LocaleResource>
+  <LocaleResource Name="Login.UserName.LengthError">
+    <Value>长度不服</Value>
+  </LocaleResource>
+  <LocaleResource Name="Login.PassWord">
+    <Value>密码</Value>
+  </LocaleResource>
+  <LocaleResource Name="Login.RememberMe">
+    <Value>记住我?</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Page.Login.Title">
+    <Value>用户登录</Value>
+  </LocaleResource>
+  <LocaleResource Name="Page.Login.IfNoAccount">
+    <Value>如果你没有帐户</Value>
+  </LocaleResource>
+  。
+
+
   <LocaleResource Name="Account.AccountActivation">
     <Value>激活帐户</Value>
   </LocaleResource>

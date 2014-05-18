@@ -188,7 +188,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -306,15 +305,7 @@
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
-    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Manage.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -336,6 +327,10 @@
     <ProjectReference Include="..\Demo.Based\Demo.Based.csproj">
       <Project>{39712A96-9A0E-44B7-842E-942F48AE9DD8}</Project>
       <Name>Demo.Based</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Demo.Services.Models\Demo.Services.Models.csproj">
+      <Project>{4AF4C1E8-1EA3-4A1B-877D-372D6C3EF793}</Project>
+      <Name>Demo.Services.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\Demo.Web.Utility\Demo.Web.Utility.csproj">
       <Project>{47b0a32b-1fa5-4d2d-8bc7-2efa5330b93a}</Project>
