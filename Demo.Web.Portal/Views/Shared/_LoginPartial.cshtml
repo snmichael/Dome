@@ -14,7 +14,7 @@ else
 {
     <ul>
 
-        <li>@Html.ActionLink(Html.Resource("Site.Register"), "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink(Html.Resource("Site.Register"), "Create", "User", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
         <li>@Html.ActionLink(Html.Resource("Site.Login"), "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
         <li>@Html.DropDownList("lang", ViewBag.LangView as IEnumerable<SelectListItem>, new { onchange = "ChangeLanguage(this)" })</li>
     </ul>

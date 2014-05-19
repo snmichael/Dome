@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@model IList<Demo.Services.Models.User>
+<h2>Index</h2>
+<table>
+    <thead>
+        <tr>
+            <th>@Html.Resource("User.Id")</th>
+            <th>@Html.Resource("User.Name")</th>
+            <th>@Html.Resource("User.Job")</th>
+            <th>@Html.Resource("User.Description")</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Job.Position</td>
+                <td>@item.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>

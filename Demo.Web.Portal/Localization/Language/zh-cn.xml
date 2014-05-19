@@ -25,7 +25,10 @@
   <LocaleResource Name="Site.ContactUs">
     <Value>联系我们</Value>
   </LocaleResource>
-
+  <LocaleResource Name="Site.Submit">
+    <Value>提交</Value>
+  </LocaleResource>
+  
   <LocaleResource Name="Login.UserName">
     <Value>用户名</Value>
   </LocaleResource>
@@ -39,14 +42,34 @@
     <Value>记住我?</Value>
   </LocaleResource>
 
+  <LocaleResource Name="User.Id">
+    <Value>编号</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.Name">
+    <Value>姓名</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.Job">
+    <Value>职务</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.Description">
+    <Value>描述</Value>
+  </LocaleResource>
+  
   <LocaleResource Name="Page.Login.Title">
     <Value>用户登录</Value>
   </LocaleResource>
   <LocaleResource Name="Page.Login.IfNoAccount">
     <Value>如果你没有帐户</Value>
   </LocaleResource>
-  。
 
+  <LocaleResource Name="Page.User.CreateTitle">
+    <Value>新增用户</Value>
+  </LocaleResource>
+  <LocaleResource Name="Page.User.UserListTitle">
+    <Value>用户管理</Value>
+  </LocaleResource>
+
+  
 
   <LocaleResource Name="Account.AccountActivation">
     <Value>激活帐户</Value>

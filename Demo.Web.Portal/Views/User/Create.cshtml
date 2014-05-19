@@ -1,0 +1,31 @@
+﻿@model Demo.Services.Models.User
+@{
+    ViewBag.Title = Html.Resource("Page.User.CreateTitle");
+}
+
+<h2>Create</h2>
+<section id="loginForm">
+    <h2>@Html.Resource("Page.User.CreateTitle")</h2>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+
+        <fieldset>
+            <legend>@Html.Resource("Page.User.CreateTitle")</legend>
+            <ol>
+                <li>
+                    @Html.LabelFor(m => m.Name)
+                    @Html.TextBoxFor(m => m.Name)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.Job)
+                    @Html.TextBoxFor(m => m.Job)
+                </li>
+            </ol>
+            <input type="submit" value=@Html.Resource("Site.Submit") />
+        </fieldset>
+        <p>
+            @Html.ActionLink(Html.Resource("Page.User.UserListTitle"), "Index")
+        </p>
+    }
+</section>

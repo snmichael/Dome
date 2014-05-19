@@ -30,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ServiceStack.Common, Version=4.0.20.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\ServiceStack.Common.4.0.20\lib\net40\ServiceStack.Common.dll</HintPath>
-    </Reference>
     <Reference Include="ServiceStack.Interfaces, Version=4.0.0.0, Culture=neutral, PublicKeyToken=e06fbc6124f57c43, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\ServiceStack.Interfaces.4.0.20\lib\net40\ServiceStack.Interfaces.dll</HintPath>
@@ -42,29 +38,22 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\ServiceStack.Redis.4.0.20\lib\net40\ServiceStack.Redis.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack.Text, Version=2.2.6.20579, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\ServiceStack.Text.4.0.20\lib\net40\ServiceStack.Text.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RedisHelper.cs" />
     <Compile Include="RedisBase.cs" />
+    <Compile Include="RedisTest.cs" />
+    <Compile Include="RedisConfigInfo.cs" />
+    <Compile Include="RedisHelper.cs" />
+    <Compile Include="RedisManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Shipper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Demo.Based\Demo.Based.csproj">
-      <Project>{39712A96-9A0E-44B7-842E-942F48AE9DD8}</Project>
-      <Name>Demo.Based</Name>
+    <ProjectReference Include="..\Demo.Services.Models\Demo.Services.Models.csproj">
+      <Project>{4AF4C1E8-1EA3-4A1B-877D-372D6C3EF793}</Project>
+      <Name>Demo.Services.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

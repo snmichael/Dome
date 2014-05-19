@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo.Service
+namespace Demo.Services.Models
 {
-    public class Class1
+    public class BaseEntity
     {
+        public int Id { get; set; }
     }
 }

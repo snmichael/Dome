@@ -185,6 +185,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -318,6 +319,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Error\Index.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -335,6 +338,10 @@
     <ProjectReference Include="..\Demo.Services.Models\Demo.Services.Models.csproj">
       <Project>{4AF4C1E8-1EA3-4A1B-877D-372D6C3EF793}</Project>
       <Name>Demo.Services.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Demo.Service\Demo.Service.csproj">
+      <Project>{C4CE956F-28B0-4F62-BBCE-3DC118BE52B1}</Project>
+      <Name>Demo.Service</Name>
     </ProjectReference>
     <ProjectReference Include="..\Demo.Web.Utility\Demo.Web.Utility.csproj">
       <Project>{47b0a32b-1fa5-4d2d-8bc7-2efa5330b93a}</Project>

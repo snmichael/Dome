@@ -1,63 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using ServiceStack.Redis;
+﻿using System.Collections.Generic;
+using Demo.Services.Models;
 
 namespace Demo.Redis
 {
-    partial class RedisBase : IDisposable
+    public class RedisBase
     {
-        public const string RedisPath = "127.0.0.1:6379";
-
-        public RedisBase()
+        public static void AddToList(User entity)
         {
-        }
-
-        public static PooledRedisClientManager ClientManager;
-        private static PooledRedisClientManager CreateManager(string[] readWriteHosts, string[] readOnlyHosts)
-        {
-            // 支持读写分离，均衡负载 
-            return new PooledRedisClientManager(readWriteHosts, readOnlyHosts, new RedisClientManagerConfig
+            using (var client = RedisManager.GetClient())
             {
-                MaxWritePoolSize = 5, // “写”链接池链接数 
-                MaxReadPoolSize = 5, // “读”链接池链接数 
-                AutoStart = true,
-            });
-        }
-
-        public IRedisClient GetInstance()
-        {
-           
-            if (ClientManager == null) 
-            {
-                ClientManager = CreateManager(new string[] { RedisPath }, new string[] { RedisPath });
+                var clientType = client.As<User>();
+                entity.Id = (int)clientType.GetNextSequence();
+                clientType.Store(entity);
             }
-            return ClientManager.GetClient();
         }
 
-        private bool _mDisposed = false;
-
-        public void Dispose()
+        public static int GetNextId<T>(T entity)
         {
-            //Dispose(true);
-            GC.SuppressFinalize(this);
+            using (var client = RedisManager.GetClient())
+            {
+                var clientType = client.As<T>();
+                return (int)clientType.GetNextSequence();
+            }
         }
 
-        //protected virtual void Dispose(bool disposing)
-        //{
-        //    if (!_mDisposed)
-        //    {
-        //        if (disposing)
-        //        {
-        //            _redis.Dispose();
-        //        }
-        //        _mDisposed = true;
-        //    }
-        //}
-
-        ~RedisBase()
+        public static IList<T> GetList<T>()
         {
-            Dispose();
+            using (var client = RedisManager.GetClient())
+            {
+                var clientType = client.As<T>();
+                return clientType.GetAll();
+            }
         }
+        
     }
 }

@@ -25,6 +25,9 @@
   <LocaleResource Name="Site.ContactUs">
     <Value>Contact Us</Value>
   </LocaleResource>
+  <LocaleResource Name="Site.Submit">
+    <Value>Submit</Value>
+  </LocaleResource>
 
 
   <LocaleResource Name="Login.UserName">
@@ -41,11 +44,33 @@
     <Value>Remember Me?</Value>
   </LocaleResource>
 
+  <LocaleResource Name="User.Id">
+    <Value>Code</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.Name">
+    <Value>Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.Job">
+    <Value>Position</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.Job">
+    <Value>Position</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.Description">
+    <Value>Description</Value>
+  </LocaleResource>
+
   <LocaleResource Name="Page.Login.Title">
     <Value>User Login</Value>
   </LocaleResource>
   <LocaleResource Name="Page.Login.IfNoAccount">
     <Value>If you have no account.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Page.User.CreateTitle">
+    <Value>Create User</Value>
+  </LocaleResource>
+  <LocaleResource Name="Page.User.UserListTitle">
+    <Value>User Manger</Value>
   </LocaleResource>
   
   <LocaleResource Name="Account.AccountActivation">
