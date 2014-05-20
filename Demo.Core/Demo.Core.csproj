@@ -77,6 +77,9 @@
     <Compile Include="Caching\MemoryCacheManager.cs" />
     <Compile Include="Caching\NullCache.cs" />
     <Compile Include="Caching\PerRequestCacheManager.cs" />
+    <Compile Include="Repository.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="IDependency.cs" />
     <Compile Include="Helper\LogHelper.cs" />
     <Compile Include="Globalization\CulturePrefixRule.cs" />
     <Compile Include="Globalization\CultureProvider.cs" />

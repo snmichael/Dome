@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Demo.IService;
 using Demo.Service;
 using Demo.Services.Models;
 using Demo.Web.Utility;
@@ -11,13 +12,20 @@ namespace Demo.Web.Portal.Controllers
 {
     public class UserController : BaseController
     {
+
+        private readonly IUserService _userService;
+
+        public UserController(IUserService userService)
+        {
+            _userService = userService;
+        }
+
         //
         // GET: /User/
 
         public ActionResult Index()
         {
-            var cmd = new UserService();
-            var list = cmd.Get();
+            var list = _userService.Get();
             return View(list);
         }
 
@@ -41,13 +49,12 @@ namespace Demo.Web.Portal.Controllers
         // POST: /User/Create
 
         [HttpPost]
-        public ActionResult Create(string name,string job)
+        public ActionResult Create(string name, string job)
         {
             try
             {
-                var model=new User {Name=name,Job = new Job {Position = job}};
-                var cmd = new UserService();
-                cmd.Add(model);
+                var model = new User { Name = name, Job = new Job { Position = job } };
+                _userService.Add(model);
                 return RedirectToAction("Index");
             }
             catch

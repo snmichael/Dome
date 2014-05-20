@@ -43,6 +43,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Demo.Core\Demo.Core.csproj">
+      <Project>{3A1D28B4-C4F0-4946-B25E-525DCCC8E598}</Project>
+      <Name>Demo.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Demo.IService\Demo.IService.csproj">
+      <Project>{8612E735-26FB-4C1D-A7A7-3AAC4294FE43}</Project>
+      <Name>Demo.IService</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Demo.Redis\Demo.Redis.csproj">
       <Project>{82AEA4AA-339C-4ADF-BD33-82C1F0AC8B68}</Project>
       <Name>Demo.Redis</Name>
