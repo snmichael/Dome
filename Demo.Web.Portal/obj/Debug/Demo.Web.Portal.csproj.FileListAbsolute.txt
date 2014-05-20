@@ -3,7 +3,6 @@ D:\Project\Demo\Demo.Web.Portal\bin\Demo.Web.Portal.dll.config
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.Web.Portal.dll
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.Web.Portal.pdb
 D:\Project\Demo\Demo.Web.Portal\bin\Antlr3.Runtime.dll
-D:\Project\Demo\Demo.Web.Portal\bin\Demo.Based.dll
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.Service.dll
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.Services.Models.dll
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.Web.Utility.dll
@@ -39,7 +38,6 @@ D:\Project\Demo\Demo.Web.Portal\bin\Demo.Web.Framework.dll
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.Redis.dll
 D:\Project\Demo\Demo.Web.Portal\bin\ServiceStack.Redis.dll
 D:\Project\Demo\Demo.Web.Portal\bin\ServiceStack.Interfaces.dll
-D:\Project\Demo\Demo.Web.Portal\bin\Demo.Based.pdb
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.Services.Models.pdb
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.Service.pdb
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.Web.Utility.pdb
@@ -115,3 +113,8 @@ D:\Project\Demo\Demo.Web.Portal\bin\zh-Hans\System.Spatial.resources.dll
 D:\Project\Demo\Demo.Web.Portal\bin\zh-Hant\System.Spatial.resources.dll
 D:\Project\Demo\Demo.Web.Portal\obj\Debug\Demo.Web.Portal.dll
 D:\Project\Demo\Demo.Web.Portal\obj\Debug\Demo.Web.Portal.pdb
+D:\Project\Demo\Demo.Web.Portal\bin\Elmah.dll
+D:\Project\Demo\Demo.Web.Portal\bin\Demo.Core.dll
+D:\Project\Demo\Demo.Web.Portal\bin\Demo.IService.dll
+D:\Project\Demo\Demo.Web.Portal\bin\Demo.Core.pdb
+D:\Project\Demo\Demo.Web.Portal\bin\Demo.IService.pdb

@@ -39,6 +39,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -192,6 +196,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Readme\Elmah.txt" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -331,16 +336,20 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Demo.Based\Demo.Based.csproj">
-      <Project>{39712A96-9A0E-44B7-842E-942F48AE9DD8}</Project>
-      <Name>Demo.Based</Name>
+    <ProjectReference Include="..\Demo.Core\Demo.Core.csproj">
+      <Project>{3A1D28B4-C4F0-4946-B25E-525DCCC8E598}</Project>
+      <Name>Demo.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Demo.IService\Demo.IService.csproj">
+      <Project>{8612e735-26fb-4c1d-a7a7-3aac4294fe43}</Project>
+      <Name>Demo.IService</Name>
     </ProjectReference>
     <ProjectReference Include="..\Demo.Services.Models\Demo.Services.Models.csproj">
-      <Project>{4AF4C1E8-1EA3-4A1B-877D-372D6C3EF793}</Project>
+      <Project>{4af4c1e8-1ea3-4a1b-877d-372d6c3ef793}</Project>
       <Name>Demo.Services.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\Demo.Service\Demo.Service.csproj">
-      <Project>{C4CE956F-28B0-4F62-BBCE-3DC118BE52B1}</Project>
+      <Project>{c4ce956f-28b0-4f62-bbce-3dc118be52b1}</Project>
       <Name>Demo.Service</Name>
     </ProjectReference>
     <ProjectReference Include="..\Demo.Web.Utility\Demo.Web.Utility.csproj">

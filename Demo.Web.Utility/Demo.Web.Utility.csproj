@@ -42,15 +42,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseController.cs" />
+    <Compile Include="Helper\ResourceExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Demo.Based\Demo.Based.csproj">
-      <Project>{39712A96-9A0E-44B7-842E-942F48AE9DD8}</Project>
-      <Name>Demo.Based</Name>
+    <ProjectReference Include="..\Demo.Core\Demo.Core.csproj">
+      <Project>{3A1D28B4-C4F0-4946-B25E-525DCCC8E598}</Project>
+      <Name>Demo.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
