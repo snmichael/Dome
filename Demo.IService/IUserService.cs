@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Demo.Core;
 using Demo.Services.Models;
 
@@ -9,6 +8,5 @@ namespace Demo.IService
     {
         void Add(User entity);
         IList<User> Get();
-
     }
 }

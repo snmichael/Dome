@@ -4,6 +4,7 @@ D:\Project\Demo\Demo.Web.Portal\bin\Demo.Web.Portal.dll
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.Web.Portal.pdb
 D:\Project\Demo\Demo.Web.Portal\bin\Antlr3.Runtime.dll
 D:\Project\Demo\Demo.Web.Portal\bin\Autofac.dll
+D:\Project\Demo\Demo.Web.Portal\bin\Autofac.Integration.Mvc.dll
 D:\Project\Demo\Demo.Web.Portal\bin\AutoMapper.dll
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.Core.dll
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.IService.dll
@@ -129,4 +130,3 @@ D:\Project\Demo\Demo.Web.Portal\bin\zh-Hant\System.Spatial.resources.dll
 D:\Project\Demo\Demo.Web.Portal\obj\Debug\Demo.Web.Portal.csprojResolveAssemblyReference.cache
 D:\Project\Demo\Demo.Web.Portal\obj\Debug\Demo.Web.Portal.dll
 D:\Project\Demo\Demo.Web.Portal\obj\Debug\Demo.Web.Portal.pdb
-D:\Project\Demo\Demo.Web.Portal\bin\Autofac.Integration.Mvc.dll
