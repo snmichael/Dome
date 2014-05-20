@@ -126,53 +126,7 @@ namespace Demo.Based
             }
             return result;
         }
-        /// <summary>
-        /// 实现DataTable第一行数据转结构体的方法
-        /// </summary>
-        /// <param name="Table">DataTable</param>
-        /// <param name="IsDispose">是否释放资源</param>
-        /// <returns>TAttribute</returns>
-        public static TAttribute SetFirstRowToAttribute(ref DataTable Table, bool IsDispose)
-        {
-            int num = (Table == null) ? 0 : Table.Rows.Count;
-            TAttribute result;
-            if (num <= 0)
-            {
-                if (IsDispose && Table != null)
-                {
-                    Table.Dispose();
-                    Table = null;
-                }
-                result = null;
-            }
-            else
-            {
-                TAttribute tAttribute = new TAttribute();
-                num = Table.Columns.Count;
-                DataRow dataRow = Table.Rows[0];
-                for (int i = 0; i < num; i++)
-                {
-                    string columnName = Table.Columns[i].ColumnName;
-                    tAttribute.Set(columnName, dataRow[columnName]);
-                }
-                if (IsDispose)
-                {
-                    Table.Dispose();
-                    Table = null;
-                }
-                result = tAttribute;
-            }
-            return result;
-        }
-        /// <summary>
-        /// 实现DataTable第一行数据转结构体的方法
-        /// </summary>
-        /// <param name="Table">DataTable</param>
-        /// <returns>TAttribute</returns>
-        public static TAttribute SetFirstRowToAttribute(DataTable Table)
-        {
-            return Base.SetFirstRowToAttribute(ref Table, false);
-        }
+        
         /// <summary>
         /// 从一个DataTable中按一定条件得到一个新的DataTable
         /// </summary>

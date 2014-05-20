@@ -87,7 +87,6 @@
     <Compile Include="Logs.cs" />
     <Compile Include="ILogs.cs" />
     <Compile Include="Files.cs" />
-    <Compile Include="TAttribute.cs" />
     <Compile Include="XmlToData.cs" />
     <Compile Include="Enum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

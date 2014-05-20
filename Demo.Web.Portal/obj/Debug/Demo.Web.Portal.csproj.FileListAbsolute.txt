@@ -39,8 +39,6 @@ D:\Project\Demo\Demo.Web.Portal\bin\Demo.Web.Framework.dll
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.Redis.dll
 D:\Project\Demo\Demo.Web.Portal\bin\ServiceStack.Redis.dll
 D:\Project\Demo\Demo.Web.Portal\bin\ServiceStack.Interfaces.dll
-D:\Project\Demo\Demo.Web.Portal\bin\ServiceStack.Text.dll
-D:\Project\Demo\Demo.Web.Portal\bin\ServiceStack.Common.dll
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.Based.pdb
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.Services.Models.pdb
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.Service.pdb
@@ -73,8 +71,6 @@ D:\Project\Demo\Demo.Web.Portal\bin\Demo.Web.Framework.pdb
 D:\Project\Demo\Demo.Web.Portal\bin\Demo.Redis.pdb
 D:\Project\Demo\Demo.Web.Portal\bin\ServiceStack.Redis.xml
 D:\Project\Demo\Demo.Web.Portal\bin\ServiceStack.Interfaces.xml
-D:\Project\Demo\Demo.Web.Portal\bin\ServiceStack.Text.xml
-D:\Project\Demo\Demo.Web.Portal\bin\ServiceStack.Common.xml
 D:\Project\Demo\Demo.Web.Portal\bin\zh-Hans\EntityFramework.resources.dll
 D:\Project\Demo\Demo.Web.Portal\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
 D:\Project\Demo\Demo.Web.Portal\bin\zh-Hans\System.Web.Helpers.resources.dll
