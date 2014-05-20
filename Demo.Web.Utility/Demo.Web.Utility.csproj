@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseController.cs" />
+    <Compile Include="Filters\ExcExceptionAttribute.cs" />
     <Compile Include="Helper\ResourceExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

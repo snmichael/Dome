@@ -27,14 +27,6 @@ namespace Demo.Web.Utility
                 Value = item.Code,
                 Selected = (String.Equals(item.Code, CultureInfo.CurrentUICulture.ToString(), StringComparison.CurrentCultureIgnoreCase))
             }).ToList();
-            //var langs = new List<SelectListItem>() { new SelectListItem() { Text = "English", Value = "en-us" }, new SelectListItem() { Text = "中文简体", Value = "zh-cn" } };
-            //foreach (SelectListItem t in langs)
-            //{
-            //    if (t.Value == CultureInfo.CurrentUICulture.ToString().ToLower())
-            //    {
-            //        t.Selected = true;
-            //    }
-            //}
             ViewBag.LangView = langs;
         }
     }

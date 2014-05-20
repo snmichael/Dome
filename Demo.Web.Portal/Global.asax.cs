@@ -23,7 +23,10 @@ namespace Demo.Web.Portal
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             GlobalizationConfig.RegisterGlobalizationRoutes();
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            AuthConfig.RegisterAuth();
+            //AuthConfig.RegisterAuth();
+
+            //读取日志  如果使用log4net,应用程序一开始的时候，都要进行初始化配置
+            log4net.Config.XmlConfigurator.Configure();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Mvc;
+using Demo.Web.Utility.Filters;
 
 namespace Demo.Web.Portal
 {
@@ -7,7 +8,7 @@ namespace Demo.Web.Portal
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            filters.Add(new ExceptionAttribute());
         }
     }
 }

@@ -46,13 +46,13 @@ namespace Demo.Core.Globalization
                     var langs = requestContext.HttpContext.Request.UserLanguages;
                     if (langs != null && langs.Any())
                     {
-                        cultureValue = langs[0].Split(',').First();
+                        cultureValue = langs[0].Split(',').First().ToLower();
                     }
                 }
 
                 if (cultureValue == null)
                 {
-                    cultureValue = CultureProvider.CultureDefault;
+                    cultureValue = CultureProvider.CultureDefault.ToLower();
                 }
                 RedirectUrl = string.Format(@"/{0}/{1}",
                     cultureValue.ToString(),
