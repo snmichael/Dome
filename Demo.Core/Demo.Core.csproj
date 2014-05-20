@@ -86,7 +86,6 @@
     <Compile Include="Globalization\Models\GlobalizationException.cs" />
     <Compile Include="Globalization\Models\Language.cs" />
     <Compile Include="Globalization\Models\ResourceItem.cs" />
-    <Compile Include="Helper\ResourceExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

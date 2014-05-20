@@ -1,33 +1,40 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Web.Mvc;
 using Demo.Based.Globalization;
 using Demo.Core.Globalization;
+using Demo.Core.Globalization.Models;
 
 namespace Demo.Web.Utility
 {
-    public class BaseController:GlobalizationBaseController
+    public class BaseController : GlobalizationBaseController
     {
-        
+        private List<SelectListItem> _langs;
+
         protected override void OnResultExecuting(ResultExecutingContext filterContext)
         {
             InitLangs();
             base.OnResultExecuting(filterContext);
-            
         }
 
         private void InitLangs()
         {
-
-            var lanuagePackages = LanuagePack.GetAvailableLanguages();
-            var langs = lanuagePackages.Select(item => new SelectListItem
+            if (_langs == null)
             {
-                Text = item.Name,
-                Value = item.Code,
-                Selected = (String.Equals(item.Code, CultureInfo.CurrentUICulture.ToString(), StringComparison.CurrentCultureIgnoreCase))
-            }).ToList();
-            ViewBag.LangView = langs;
+                var lanuagePackages = LanuagePack.GetAvailableLanguages();
+                _langs = lanuagePackages.Select(item => new SelectListItem
+                {
+                    Text = item.Name,
+                    Value = item.Code,
+                    Selected =
+                        (String.Equals(item.Code, CultureInfo.CurrentUICulture.ToString(),
+                            StringComparison.CurrentCultureIgnoreCase))
+                }).ToList();
+                ViewBag.LangView = null;
+            }
+            ViewBag.LangView = _langs;
         }
     }
 }
