@@ -2,7 +2,6 @@
 using System.Web.Security;
 using Demo.Services.Models;
 using Demo.Web.Utility;
-using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
 
 namespace Demo.Web.Portal.Controllers
@@ -73,8 +72,7 @@ namespace Demo.Web.Portal.Controllers
                 : message == ManageMessageId.SetPasswordSuccess ? "已设置你的密码。"
                 : message == ManageMessageId.RemoveLoginSuccess ? "已删除外部登录。"
                 : "";
-            ViewBag.HasLocalPassword = OAuthWebSecurity.HasLocalAccount(WebSecurity.GetUserId(User.Identity.Name));
-            ViewBag.ReturnUrl = Url.Action("Manage");
+         
             return View();
         }
 
@@ -115,7 +113,7 @@ namespace Demo.Web.Portal.Controllers
 
             public override void ExecuteResult(ControllerContext context)
             {
-                OAuthWebSecurity.RequestAuthentication(Provider, ReturnUrl);
+                
             }
         }
 

@@ -31,7 +31,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
@@ -42,8 +41,11 @@
     <Compile Include="UserDto.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Demo.Web.Framework\Demo.Framework.Core.csproj">
-      <Project>{ACDD03A9-1783-4A11-9CDC-57E6FF146C43}</Project>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Demo.Framework.Core\Demo.Framework.Core.csproj">
+      <Project>{59762B1D-27DE-456C-BEFD-591B2B5ABA9D}</Project>
       <Name>Demo.Framework.Core</Name>
     </ProjectReference>
   </ItemGroup>

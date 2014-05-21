@@ -33,9 +33,6 @@
     <Reference Include="AutoMapper">
       <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
     </Reference>
-    <Reference Include="AutoMapper.Net4">
-      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -52,6 +49,10 @@
       <Project>{C360C525-622D-48D3-B36F-C2B804493BAF}</Project>
       <Name>Demo.Component.Entity</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Demo.Framework.Core\Demo.Framework.Core.csproj">
+      <Project>{59762B1D-27DE-456C-BEFD-591B2B5ABA9D}</Project>
+      <Name>Demo.Framework.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Demo.Framework.Data\Demo.Framework.Data.csproj">
       <Project>{5C85FF2A-B13C-44E1-AD89-03EC65322BD2}</Project>
       <Name>Demo.Framework.Data</Name>
@@ -59,10 +60,6 @@
     <ProjectReference Include="..\Demo.Services.Models\Demo.Services.Models.csproj">
       <Project>{4AF4C1E8-1EA3-4A1B-877D-372D6C3EF793}</Project>
       <Name>Demo.Services.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Demo.Web.Framework\Demo.Framework.Core.csproj">
-      <Project>{ACDD03A9-1783-4A11-9CDC-57E6FF146C43}</Project>
-      <Name>Demo.Framework.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\Dome.DataBase\Dome.DataBase.csproj">
       <Project>{03A6FEE4-4E86-4062-B168-CDF599323106}</Project>

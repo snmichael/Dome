@@ -36,9 +36,6 @@
     <Reference Include="EntityFramework.Extended">
       <HintPath>..\Demo.Web.Portal\lib\EntityFramework.Extended.dll</HintPath>
     </Reference>
-    <Reference Include="Enyim.Caching">
-      <HintPath>..\Demo.Web.Portal\lib\Enyim.Caching.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
       <HintPath>..\Demo.Web.Portal\lib\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
     </Reference>
