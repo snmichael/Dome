@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CrmDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="Sys_Area">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PostCode" Type="varchar" MaxLength="10" />
+          <Property Name="AreaCode" Type="varchar" MaxLength="10" />
+          <Property Name="ParentId" Type="int" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
+          <Property Name="Orders" Type="int" Nullable="false" />
+          <Property Name="Display" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sys_CodeMaster">
+          <Key>
+            <PropertyRef Name="类型编号" />
+            <PropertyRef Name="键" />
+          </Key>
+          <Property Name="类型编号" Type="int" Nullable="false" />
+          <Property Name="键" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="值" Type="nvarchar" MaxLength="50" />
+          <Property Name="Column_1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Column_2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Column_3" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="ForTable" Type="nvarchar" MaxLength="50" />
+          <Property Name="ForColumn" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Sys_Department">
+          <Key>
+            <PropertyRef Name="DepartmentId" />
+          </Key>
+          <Property Name="DepartmentId" Type="int" Nullable="false" />
+          <Property Name="DepartmentName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ParentId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sys_Login">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="24" Nullable="false" />
+          <Property Name="PassWord" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastLoginTime" Type="datetime" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sys_Position">
+          <Key>
+            <PropertyRef Name="PositionId" />
+          </Key>
+          <Property Name="PositionId" Type="int" Nullable="false" />
+          <Property Name="PositionName" Type="nvarchar" MaxLength="100" />
+          <Property Name="DefaultRoleId" Type="int" Nullable="false" />
+          <Property Name="AllParentIds" Type="varchar" MaxLength="200" />
+          <Property Name="ParentId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sys_Powers">
+          <Key>
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="FuncId" />
+          </Key>
+          <Property Name="RoleId" Type="int" Nullable="false" />
+          <Property Name="FuncId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sys_Resource">
+          <Key>
+            <PropertyRef Name="FuncID" />
+          </Key>
+          <Property Name="FuncID" Type="int" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Path" Type="varchar" MaxLength="200" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ParentFunId" Type="int" Nullable="false" />
+          <Property Name="Orders" Type="int" Nullable="false" />
+          <Property Name="Display" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sys_Role_Relation">
+          <Key>
+            <PropertyRef Name="UID" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UID" Type="int" Nullable="false" />
+          <Property Name="RoleId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sys_Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="int" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sys_Users">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="Department" Type="int" Nullable="false" />
+          <Property Name="Position" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="CrmDbModelStoreContainer">
+          <EntitySet Name="Sys_Area" EntityType="Self.Sys_Area" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_CodeMaster" EntityType="Self.Sys_CodeMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_Department" EntityType="Self.Sys_Department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_Login" EntityType="Self.Sys_Login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_Position" EntityType="Self.Sys_Position" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_Powers" EntityType="Self.Sys_Powers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_Resource" EntityType="Self.Sys_Resource" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_Role_Relation" EntityType="Self.Sys_Role_Relation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_Roles" EntityType="Self.Sys_Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_Users" EntityType="Self.Sys_Users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CrmDbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="Sys_Area">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PostCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="AreaCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ParentId" Type="Int32" Nullable="false" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <Property Name="Orders" Type="Int32" Nullable="false" />
+          <Property Name="Display" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sys_CodeMaster">
+          <Key>
+            <PropertyRef Name="类型编号" />
+            <PropertyRef Name="键" />
+          </Key>
+          <Property Name="类型编号" Type="Int32" Nullable="false" />
+          <Property Name="键" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="值" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Column_1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Column_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Column_3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ForTable" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ForColumn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Sys_Department">
+          <Key>
+            <PropertyRef Name="DepartmentId" />
+          </Key>
+          <Property Name="DepartmentId" Type="Int32" Nullable="false" />
+          <Property Name="DepartmentName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ParentId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sys_Login">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="24" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PassWord" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastLoginTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Sys_Position">
+          <Key>
+            <PropertyRef Name="PositionId" />
+          </Key>
+          <Property Name="PositionId" Type="Int32" Nullable="false" />
+          <Property Name="PositionName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DefaultRoleId" Type="Int32" Nullable="false" />
+          <Property Name="AllParentIds" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ParentId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sys_Powers">
+          <Key>
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="FuncId" />
+          </Key>
+          <Property Name="RoleId" Type="Int32" Nullable="false" />
+          <Property Name="FuncId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sys_Resource">
+          <Key>
+            <PropertyRef Name="FuncID" />
+          </Key>
+          <Property Name="FuncID" Type="Int32" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Path" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="DisplayName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ParentFunId" Type="Int32" Nullable="false" />
+          <Property Name="Orders" Type="Int32" Nullable="false" />
+          <Property Name="Display" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sys_Role_Relation">
+          <Key>
+            <PropertyRef Name="UID" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UID" Type="Int32" Nullable="false" />
+          <Property Name="RoleId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sys_Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="Int32" Nullable="false" />
+          <Property Name="RoleName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sys_Users">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Department" Type="Int32" Nullable="false" />
+          <Property Name="Position" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="CrmDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Sys_Area" EntityType="Self.Sys_Area" />
+          <EntitySet Name="Sys_CodeMaster" EntityType="Self.Sys_CodeMaster" />
+          <EntitySet Name="Sys_Department" EntityType="Self.Sys_Department" />
+          <EntitySet Name="Sys_Login" EntityType="Self.Sys_Login" />
+          <EntitySet Name="Sys_Position" EntityType="Self.Sys_Position" />
+          <EntitySet Name="Sys_Powers" EntityType="Self.Sys_Powers" />
+          <EntitySet Name="Sys_Resource" EntityType="Self.Sys_Resource" />
+          <EntitySet Name="Sys_Role_Relation" EntityType="Self.Sys_Role_Relation" />
+          <EntitySet Name="Sys_Roles" EntityType="Self.Sys_Roles" />
+          <EntitySet Name="Sys_Users" EntityType="Self.Sys_Users" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CrmDbModelStoreContainer" CdmEntityContainer="CrmDbEntities">
+          <EntitySetMapping Name="Sys_Area">
+            <EntityTypeMapping TypeName="CrmDbModel.Sys_Area">
+              <MappingFragment StoreEntitySet="Sys_Area">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+                <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Orders" ColumnName="Orders" />
+                <ScalarProperty Name="Display" ColumnName="Display" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_CodeMaster">
+            <EntityTypeMapping TypeName="CrmDbModel.Sys_CodeMaster">
+              <MappingFragment StoreEntitySet="Sys_CodeMaster">
+                <ScalarProperty Name="类型编号" ColumnName="类型编号" />
+                <ScalarProperty Name="键" ColumnName="键" />
+                <ScalarProperty Name="值" ColumnName="值" />
+                <ScalarProperty Name="Column_1" ColumnName="Column_1" />
+                <ScalarProperty Name="Column_2" ColumnName="Column_2" />
+                <ScalarProperty Name="Column_3" ColumnName="Column_3" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ForTable" ColumnName="ForTable" />
+                <ScalarProperty Name="ForColumn" ColumnName="ForColumn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_Department">
+            <EntityTypeMapping TypeName="CrmDbModel.Sys_Department">
+              <MappingFragment StoreEntitySet="Sys_Department">
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_Login">
+            <EntityTypeMapping TypeName="CrmDbModel.Sys_Login">
+              <MappingFragment StoreEntitySet="Sys_Login">
+                <ScalarProperty Name="UID" ColumnName="UID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+                <ScalarProperty Name="LastLoginTime" ColumnName="LastLoginTime" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_Position">
+            <EntityTypeMapping TypeName="CrmDbModel.Sys_Position">
+              <MappingFragment StoreEntitySet="Sys_Position">
+                <ScalarProperty Name="PositionId" ColumnName="PositionId" />
+                <ScalarProperty Name="PositionName" ColumnName="PositionName" />
+                <ScalarProperty Name="DefaultRoleId" ColumnName="DefaultRoleId" />
+                <ScalarProperty Name="AllParentIds" ColumnName="AllParentIds" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_Powers">
+            <EntityTypeMapping TypeName="CrmDbModel.Sys_Powers">
+              <MappingFragment StoreEntitySet="Sys_Powers">
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="FuncId" ColumnName="FuncId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_Resource">
+            <EntityTypeMapping TypeName="CrmDbModel.Sys_Resource">
+              <MappingFragment StoreEntitySet="Sys_Resource">
+                <ScalarProperty Name="FuncID" ColumnName="FuncID" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Path" ColumnName="Path" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="ParentFunId" ColumnName="ParentFunId" />
+                <ScalarProperty Name="Orders" ColumnName="Orders" />
+                <ScalarProperty Name="Display" ColumnName="Display" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_Role_Relation">
+            <EntityTypeMapping TypeName="CrmDbModel.Sys_Role_Relation">
+              <MappingFragment StoreEntitySet="Sys_Role_Relation">
+                <ScalarProperty Name="UID" ColumnName="UID" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_Roles">
+            <EntityTypeMapping TypeName="CrmDbModel.Sys_Roles">
+              <MappingFragment StoreEntitySet="Sys_Roles">
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_Users">
+            <EntityTypeMapping TypeName="CrmDbModel.Sys_Users">
+              <MappingFragment StoreEntitySet="Sys_Users">
+                <ScalarProperty Name="UID" ColumnName="UID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

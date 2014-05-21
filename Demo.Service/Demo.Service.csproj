@@ -34,26 +34,34 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseService.cs" />
     <Compile Include="UserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Demo.Core\Demo.Core.csproj">
-      <Project>{3A1D28B4-C4F0-4946-B25E-525DCCC8E598}</Project>
-      <Name>Demo.Core</Name>
+    <ProjectReference Include="..\Demo.Component\Demo.Component.csproj">
+      <Project>{B91B971B-82F5-45A6-9720-B1C4929657E9}</Project>
+      <Name>Demo.Component</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Demo.Framework.Data\Demo.Framework.Data.csproj">
+      <Project>{5C85FF2A-B13C-44E1-AD89-03EC65322BD2}</Project>
+      <Name>Demo.Framework.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\Demo.IService\Demo.IService.csproj">
       <Project>{8612E735-26FB-4C1D-A7A7-3AAC4294FE43}</Project>
       <Name>Demo.IService</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Demo.Redis\Demo.Redis.csproj">
-      <Project>{82AEA4AA-339C-4ADF-BD33-82C1F0AC8B68}</Project>
-      <Name>Demo.Redis</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Demo.Services.Models\Demo.Services.Models.csproj">
       <Project>{4AF4C1E8-1EA3-4A1B-877D-372D6C3EF793}</Project>
       <Name>Demo.Services.Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Dome.DataBase\Dome.DataBase.csproj">
+      <Project>{03A6FEE4-4E86-4062-B168-CDF599323106}</Project>
+      <Name>Dome.DataBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

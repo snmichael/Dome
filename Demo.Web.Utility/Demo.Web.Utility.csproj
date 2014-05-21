@@ -36,6 +36,15 @@
     <Reference Include="Autofac.Integration.Mvc">
       <HintPath>..\packages\Autofac.Mvc3.2.6.3.862\lib\NET40\Autofac.Integration.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -48,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseController.cs" />
-    <Compile Include="RegisterAutofacForAll.cs" />
+    <Compile Include="AutoMapperStartupTask.cs" />
     <Compile Include="Filters\ExcExceptionAttribute.cs" />
     <Compile Include="Helper\ResourceExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,15 +67,24 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Demo.Core\Demo.Core.csproj">
-      <Project>{3A1D28B4-C4F0-4946-B25E-525DCCC8E598}</Project>
-      <Name>Demo.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Demo.Services.Models\Demo.Services.Models.csproj">
+      <Project>{4AF4C1E8-1EA3-4A1B-877D-372D6C3EF793}</Project>
+      <Name>Demo.Services.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Demo.Web.Framework\Demo.Framework.Core.csproj">
+      <Project>{ACDD03A9-1783-4A11-9CDC-57E6FF146C43}</Project>
+      <Name>Demo.Framework.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dome.DataBase\Dome.DataBase.csproj">
+      <Project>{03A6FEE4-4E86-4062-B168-CDF599323106}</Project>
+      <Name>Dome.DataBase</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -39,12 +39,12 @@
     <Compile Include="Job.cs" />
     <Compile Include="LoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="UserDto.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Demo.Web.Framework\Demo.Web.Framework.csproj">
+    <ProjectReference Include="..\Demo.Web.Framework\Demo.Framework.Core.csproj">
       <Project>{ACDD03A9-1783-4A11-9CDC-57E6FF146C43}</Project>
-      <Name>Demo.Web.Framework</Name>
+      <Name>Demo.Framework.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

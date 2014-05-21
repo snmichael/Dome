@@ -42,17 +42,20 @@
     <Value>记住我?</Value>
   </LocaleResource>
 
-  <LocaleResource Name="User.Id">
+  <LocaleResource Name="User.UID">
     <Value>编号</Value>
   </LocaleResource>
   <LocaleResource Name="User.Name">
     <Value>姓名</Value>
   </LocaleResource>
-  <LocaleResource Name="User.Job">
+  <LocaleResource Name="User.Department">
+    <Value>部门</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.Position">
     <Value>职务</Value>
   </LocaleResource>
-  <LocaleResource Name="User.Description">
-    <Value>描述</Value>
+  <LocaleResource Name="User.CreateTime">
+    <Value>创建时间</Value>
   </LocaleResource>
   
   <LocaleResource Name="Page.Login.Title">

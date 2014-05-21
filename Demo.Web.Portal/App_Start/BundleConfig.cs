@@ -38,6 +38,13 @@ namespace Demo.Web.Portal
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+
+            bundles.Add(new StyleBundle("~/Content/Bootstrap").Include(
+                "~/Scripts/Bootstrap/css/bootstrap.min",
+                "~/Scripts/Bootstrap/css/bootstrap-theme.min"
+                ));
+            bundles.Add(new ScriptBundle("~/bundles/Bootstrap").Include(
+               "~/Scripts/Bootstrap/js/bootstrap.min"));
         }
     }
 }

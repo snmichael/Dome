@@ -1,7 +1,7 @@
-﻿using Demo.Based.Globalization;
-using Demo.Web.Framework.Mvc;
+﻿using Demo.Framework.Core.Globalization;
+using Demo.Framework.Core.Mvc;
 
-namespace Demo.Web.Framework.DataAnnotations
+namespace Demo.Framework.Core.DataAnnotations
 {
     public class ResourceDisplayName : System.ComponentModel.DisplayNameAttribute, IModelAttribute
     {

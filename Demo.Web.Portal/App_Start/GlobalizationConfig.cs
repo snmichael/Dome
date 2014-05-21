@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 using System.Web.Routing;
-using Demo.Core.Globalization;
+using Demo.Framework.Core.Globalization;
 
 namespace Demo.Web.Portal
 {

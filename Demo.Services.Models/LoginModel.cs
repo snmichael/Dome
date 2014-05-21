@@ -1,4 +1,4 @@
-﻿using Demo.Web.Framework.DataAnnotations;
+﻿using Demo.Framework.Core.DataAnnotations;
 
 namespace Demo.Services.Models
 {

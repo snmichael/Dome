@@ -1,4 +1,4 @@
-﻿namespace Demo.Web.Framework.Mvc
+﻿namespace Demo.Framework.Core.Mvc
 {
     public interface IModelAttribute
     {

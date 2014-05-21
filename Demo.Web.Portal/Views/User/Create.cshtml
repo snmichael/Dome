@@ -1,4 +1,4 @@
-﻿@model Demo.Services.Models.User
+﻿@model Demo.Services.Models.UserDto
 @{
     ViewBag.Title = Html.Resource("Page.User.CreateTitle");
 }
@@ -18,8 +18,17 @@
                     @Html.TextBoxFor(m => m.Name)
                 </li>
                 <li>
-                    @Html.LabelFor(m => m.Job)
-                    @Html.TextBoxFor(m => m.Job)
+                    @Html.LabelFor(m => m.Department)
+                    @Html.TextBoxFor(m => m.Department)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.Position)
+                    @Html.TextBoxFor(m => m.Position)
+                </li>
+                
+                <li>
+                    @Html.LabelFor(m => m.CreateTime)
+                    @Html.EditorFor(m => m.CreateTime)
                 </li>
             </ol>
             <input type="submit" value=@Html.Resource("Site.Submit") />

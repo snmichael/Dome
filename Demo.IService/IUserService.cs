@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
-using Demo.Core;
 using Demo.Services.Models;
 
 namespace Demo.IService
 {
-    public interface IUserService : IDependency
+    public interface IUserService 
     {
-        void Add(User entity);
-        IList<User> Get();
+        void Add(UserDto entity);
+        IList<UserDto> Get();
     }
 }

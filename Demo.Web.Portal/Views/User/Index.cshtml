@@ -1,25 +1,28 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
-@model IList<Demo.Services.Models.User>
+@model IList<Demo.Services.Models.UserDto>
 <h2>Index</h2>
 <table>
     <thead>
         <tr>
-            <th>@Html.Resource("User.Id")</th>
+            <th>@Html.Resource("User.UID")</th>
             <th>@Html.Resource("User.Name")</th>
-            <th>@Html.Resource("User.Job")</th>
-            <th>@Html.Resource("User.Description")</th>
+            <th>@Html.Resource("User.Department")</th>
+            <th>@Html.Resource("User.Position")</th>
+            <th>@Html.Resource("User.CreateTime")</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.Id</td>
+                <td>@item.UID</td>
                 <td>@item.Name</td>
-                <td>@item.Job.Position</td>
-                <td>@item.Description</td>
+                <td>@item.Department</td>
+                <td>@item.Position</td>
+                <th>@item.CreateTime</th>
+                
             </tr>
         }
     </tbody>

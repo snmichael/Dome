@@ -1,5 +1,5 @@
 ﻿using System.Web.Mvc;
-using Demo.Based.Globalization;
+using Demo.Framework.Core.Globalization;
 
 namespace Demo.Web.Utility.Helper
 {

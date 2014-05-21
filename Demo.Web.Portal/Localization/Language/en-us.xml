@@ -44,20 +44,20 @@
     <Value>Remember Me?</Value>
   </LocaleResource>
 
-  <LocaleResource Name="User.Id">
+  <LocaleResource Name="User.UID">
     <Value>Code</Value>
   </LocaleResource>
   <LocaleResource Name="User.Name">
     <Value>Name</Value>
   </LocaleResource>
-  <LocaleResource Name="User.Job">
+  <LocaleResource Name="User.Department">
+    <Value>Department</Value>
+  </LocaleResource>
+  <LocaleResource Name="User.Position">
     <Value>Position</Value>
   </LocaleResource>
-  <LocaleResource Name="User.Job">
-    <Value>Position</Value>
-  </LocaleResource>
-  <LocaleResource Name="User.Description">
-    <Value>Description</Value>
+  <LocaleResource Name="User.CreateTime">
+    <Value>CreateTime</Value>
   </LocaleResource>
 
   <LocaleResource Name="Page.Login.Title">

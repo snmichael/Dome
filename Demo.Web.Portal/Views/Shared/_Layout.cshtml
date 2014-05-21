@@ -7,7 +7,9 @@
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
+        @Styles.Render("~/Content/Bootstrap")
         @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/Bootstrap")
         <script language="javascript">
             var ChangeLanguage = function (sender) {
                 var lang = location.pathname.split('/')[1];

@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{03A6FEE4-4E86-4062-B168-CDF599323106}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dome.DataBase</RootNamespace>
+    <AssemblyName>Dome.DataBase</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrmDb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrmDb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CrmDb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrmDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CrmDb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrmDb.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sys_Area.cs">
+      <DependentUpon>CrmDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_CodeMaster.cs">
+      <DependentUpon>CrmDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Department.cs">
+      <DependentUpon>CrmDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Login.cs">
+      <DependentUpon>CrmDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Position.cs">
+      <DependentUpon>CrmDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Powers.cs">
+      <DependentUpon>CrmDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Resource.cs">
+      <DependentUpon>CrmDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Roles.cs">
+      <DependentUpon>CrmDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Role_Relation.cs">
+      <DependentUpon>CrmDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Users.cs">
+      <DependentUpon>CrmDb.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="CrmDb.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CrmDb.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="CrmDb.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CrmDb.edmx</DependentUpon>
+      <LastGenOutput>CrmDb.Context.cs</LastGenOutput>
+    </None>
+    <None Include="CrmDb.edmx.diagram">
+      <DependentUpon>CrmDb.edmx</DependentUpon>
+    </None>
+    <None Include="CrmDb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CrmDb.edmx</DependentUpon>
+      <LastGenOutput>CrmDb.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Demo.Framework.Data\Demo.Framework.Data.csproj">
+      <Project>{5C85FF2A-B13C-44E1-AD89-03EC65322BD2}</Project>
+      <Name>Demo.Framework.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

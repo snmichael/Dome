@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Demo.IService;
-using Demo.Service;
 using Demo.Services.Models;
 using Demo.Web.Utility;
 
@@ -30,14 +25,6 @@ namespace Demo.Web.Portal.Controllers
         }
 
         //
-        // GET: /User/Details/5
-
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        //
         // GET: /User/Create
 
         public ActionResult Create()
@@ -49,11 +36,10 @@ namespace Demo.Web.Portal.Controllers
         // POST: /User/Create
 
         [HttpPost]
-        public ActionResult Create(string name, string job)
+        public ActionResult Create(UserDto model)
         {
             try
             {
-                var model = new User { Name = name, Job = new Job { Position = job } };
                 _userService.Add(model);
                 return RedirectToAction("Index");
             }
@@ -63,56 +49,6 @@ namespace Demo.Web.Portal.Controllers
             }
         }
 
-        //
-        // GET: /User/Edit/5
-
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        //
-        // POST: /User/Edit/5
-
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        //
-        // GET: /User/Delete/5
-
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        //
-        // POST: /User/Delete/5
-
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+      
     }
 }

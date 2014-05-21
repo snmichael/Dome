@@ -1,10 +1,6 @@
-﻿using System;
-using System.Globalization;
-using System.IO;
-using System.Security.Policy;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
-using Demo.Core;
+using Demo.Framework.Core;
 
 namespace Demo.Web.Utility.Filters
 {
@@ -14,11 +10,17 @@ namespace Demo.Web.Utility.Filters
         {
             base.OnException(filterContext);
             //处理错误消息，将其跳转到一个页面
-            LogHelper.WriteLog(filterContext.Exception.ToString());
+            var log = LogHelper.GetInstance("Error");
+            log.Error(filterContext.Exception.ToString());
             //页面跳转到错误页面
-            string errorUrl = "/{0}/Error/";
-            errorUrl = string.Format(errorUrl, CultureInfo.CurrentUICulture.ToString().ToLower());
-            filterContext.HttpContext.Response.Redirect(errorUrl);
+            filterContext.Result= new RedirectToRouteResult(
+                new RouteValueDictionary
+                {
+                    {"action","Index"},
+                    {"controller","Error"},
+                    {"HttpCode","403"}
+                }
+                );
         }
     }
 }

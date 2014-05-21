@@ -268,6 +268,19 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="lib\EntityFramework.Extended.dll" />
+    <Content Include="lib\EntityFramework.Extended.xml" />
+    <Content Include="lib\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="lib\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="lib\Microsoft.Practices.ServiceLocation.dll" />
+    <Content Include="lib\Microsoft.Practices.Unity.dll" />
+    <Content Include="lib\Microsoft.Practices.Unity.Interception.dll" />
+    <Content Include="lib\NPOI.DDF.dll" />
+    <Content Include="lib\NPOI.dll" />
+    <Content Include="lib\NPOI.HPSF.dll" />
+    <Content Include="lib\NPOI.HSSF.dll" />
+    <Content Include="lib\NPOI.POIFS.dll" />
+    <Content Include="lib\NPOI.Util.dll" />
     <Content Include="lib\ServiceStack.Common.dll" />
     <Content Include="lib\ServiceStack.Interfaces.dll" />
     <Content Include="lib\ServiceStack.Redis.dll" />
@@ -338,22 +351,22 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Error\Index.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\Error\Index.cshtml" />
+    <Content Include="log4net.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="config\" />
-    <Folder Include="Filters\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Demo.Core\Demo.Core.csproj">
-      <Project>{3A1D28B4-C4F0-4946-B25E-525DCCC8E598}</Project>
-      <Name>Demo.Core</Name>
+    <ProjectReference Include="..\Demo.Framework.Web\Demo.Framework.Web.csproj">
+      <Project>{A722F594-42DC-4738-B603-6D4EC10D6002}</Project>
+      <Name>Demo.Framework.Web</Name>
     </ProjectReference>
     <ProjectReference Include="..\Demo.IService\Demo.IService.csproj">
       <Project>{8612e735-26fb-4c1d-a7a7-3aac4294fe43}</Project>
@@ -366,6 +379,10 @@
     <ProjectReference Include="..\Demo.Service\Demo.Service.csproj">
       <Project>{c4ce956f-28b0-4f62-bbce-3dc118be52b1}</Project>
       <Name>Demo.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Demo.Web.Framework\Demo.Framework.Core.csproj">
+      <Project>{ACDD03A9-1783-4A11-9CDC-57E6FF146C43}</Project>
+      <Name>Demo.Framework.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\Demo.Web.Utility\Demo.Web.Utility.csproj">
       <Project>{47b0a32b-1fa5-4d2d-8bc7-2efa5330b93a}</Project>
