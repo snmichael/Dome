@@ -76,3 +76,5 @@ D:\Project\Demo\Demo.Web.Portal\bin\zh-Hans\System.Net.Http.Formatting.resources
 D:\Project\Demo\Demo.Web.Portal\obj\Debug\Demo.Web.Portal.csprojResolveAssemblyReference.cache
 D:\Project\Demo\Demo.Web.Portal\obj\Debug\Demo.Web.Portal.dll
 D:\Project\Demo\Demo.Web.Portal\obj\Debug\Demo.Web.Portal.pdb
+D:\Project\Demo\Demo.Web.Portal\bin\Autofac.dll
+D:\Project\Demo\Demo.Web.Portal\bin\Autofac.xml

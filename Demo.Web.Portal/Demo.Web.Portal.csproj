@@ -39,6 +39,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=3.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.3.1.0\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.Mvc4.3.1.0\lib\net40\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="AutoMapper">
       <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
     </Reference>
@@ -283,6 +291,10 @@
     <ProjectReference Include="..\Demo.Services.Models\Demo.Services.Models.csproj">
       <Project>{4af4c1e8-1ea3-4a1b-877d-372d6c3ef793}</Project>
       <Name>Demo.Services.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Demo.Service\Demo.Service.csproj">
+      <Project>{c4ce956f-28b0-4f62-bbce-3dc118be52b1}</Project>
+      <Name>Demo.Service</Name>
     </ProjectReference>
     <ProjectReference Include="..\Demo.Web.Utility\Demo.Web.Utility.csproj">
       <Project>{47b0a32b-1fa5-4d2d-8bc7-2efa5330b93a}</Project>
